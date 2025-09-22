@@ -4,11 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ifunsoedmobile"
+    namespace = "com.unsoed.informatikamobile"
     compileSdk = 36
 
+    viewBinding {
+        enable = true
+    }
     defaultConfig {
-        applicationId = "com.example.ifunsoedmobile"
+        applicationId = "com.unsoed.informatikamobile"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -42,6 +45,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
