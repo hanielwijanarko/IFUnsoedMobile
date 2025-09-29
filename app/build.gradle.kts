@@ -7,9 +7,6 @@ android {
     namespace = "com.unsoed.informatikamobile"
     compileSdk = 36
 
-    viewBinding {
-        enable = true
-    }
     defaultConfig {
         applicationId = "com.unsoed.informatikamobile"
         minSdk = 24
@@ -36,8 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    viewBinding {
+        enable = true
+    }
 }
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -46,7 +45,15 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.constraintlayout)
+    implementation("androidx.core:core-splashscreen:1.0.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation ("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.activity.ktx)
+
 }

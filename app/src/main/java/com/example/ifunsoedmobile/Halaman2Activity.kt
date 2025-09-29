@@ -1,11 +1,14 @@
 package com.example.ifunsoedmobile
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.semantics.setText
 import androidx.core.net.toUri
-import com.example.ifunsoedmobile.databinding.ActivityHalaman2Binding
+import com.unsoed.informatikamobile.R
+import com.unsoed.informatikamobile.databinding.ActivityHalaman2Binding
 
 class Halaman2Activity : AppCompatActivity() {
 
@@ -38,7 +41,7 @@ class Halaman2Activity : AppCompatActivity() {
             it.tvLayout.setText(R.string.email)
         }
 
-        binding.layoutInstagram.let {
+        binding.layoutIg.let {
             it.imgIcon.setImageResource(R.drawable.ic_himpunan)
             it.tvLayout.setText(R.string.himpunan)
         }
@@ -58,7 +61,7 @@ class Halaman2Activity : AppCompatActivity() {
             startActivity(mapIntent)
         }
 
-        binding.layoutInstagram.root.setOnClickListener {
+        binding.layoutIg.root.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = getString(R.string.ig_himpunan).toUri()
             startActivity(intent)
